@@ -1,0 +1,7 @@
+<p>instructor-list works!</p>
+<h2>Liste des Instructeurs</h2>
+<ul>
+    <li *ngFor="let instructor of instructors">
+        {{ instructor.firstName }} {{ instructor.lastName }} - Date d'embauche : {{ instructor.dateOfHire }}
+    </li>
+</ul>

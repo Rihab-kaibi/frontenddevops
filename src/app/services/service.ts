@@ -7,7 +7,7 @@ import { Instructor } from '../models/Instructor';
     providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://192.168.33.10:8089/api/instructor'; // Correct the API URL to match your endpoints
+  private apiUrl = 'http://192.168.33.10:8090/api/instructor'; // Correct the API URL to match your endpoints
 
   constructor(private http: HttpClient) {}
 

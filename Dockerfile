@@ -1,9 +1,8 @@
-# Stage 1: Build the Angular application
-FROM node:18-alpine as build
+FROM node:18-alpine AS build
 WORKDIR /app
-
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
 COPY . .
-RUN npm install
 RUN npm run build --prod
 
 

@@ -1,9 +1,8 @@
 # Build the Angular app
 FROM node:18-alpine AS node
 WORKDIR /app
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
 COPY . .
+RUN npm install
 RUN npm run build --prod
 
 # Serve the app with Nginx

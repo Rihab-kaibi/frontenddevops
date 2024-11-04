@@ -32,12 +32,20 @@ services:
       }'
     stdin_open: true
     tty: true
+
   angular-app:
     image: kaibirihab/rihabimagefront
     container_name: docker-compose-angular-app
     ports:
-      - "4200:80"
+      - "192.168.33.10:4200:80"  # Expose sur l'IP spécifique
     depends_on:
       - stock-service
+
 volumes:
   db:
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 192.168.33.0/24
